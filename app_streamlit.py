@@ -7,16 +7,16 @@ st.set_page_config(page_title="YOLO Detector", layout="wide")
 st.title("YOLO Object Detection")
 st.caption("Upload an image and the app will run detection automatically.")
 
-# ---- Model loading (cached) ----
+
 @st.cache_resource
 def load_model(weights_path: str):
     return YOLO(weights_path)
 
-# Change this to your trained weights if needed (e.g., "runs/detect/train/weights/best.pt")
+
 WEIGHTS = "train27/weights/best.pt"
 model = load_model(WEIGHTS)
 
-# ---- File upload ----
+
 uploaded = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
 if uploaded:
