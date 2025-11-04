@@ -4,7 +4,7 @@ from PIL import Image
 from io import BytesIO
 
 st.set_page_config(page_title="YOLO Detector", layout="wide")
-st.title("YOLO Object Detection")
+st.title("A YOLOv12-Based Deep Learning Framework for Automated Skin Cancer Detection")
 st.caption("Upload an image and the app will run detection automatically.")
 
 
